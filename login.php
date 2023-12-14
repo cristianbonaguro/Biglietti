@@ -12,11 +12,13 @@ session_start();
     {
         $_SESSION["active_login"] = $username;
         header("Location: index.php");
+        setcookie("time", date("l jS \of F Y h:i:s A"), time() + (86400 * 30), "/");
     }
     else{
         $error= "username o passward errati";
     }
     }
+
 ?>
 <!DOCTYPE html>
 <html lang="en">

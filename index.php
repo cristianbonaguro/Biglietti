@@ -38,6 +38,9 @@ if(isset($_POST['compra'])){
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
+    <div id="time">
+       <p> First Acess: <br> <?php echo $_COOKIE['time']; ?></p> 
+    </div>
     <div id="logout">
     <form method="post">
         <input type="submit"name="logout" value="Logout">
