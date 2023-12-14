@@ -1,4 +1,5 @@
 <?php
+$error = "";
 session_start();
     if(isset($_SESSION['active_login']))
         header("Location: paginaLogin.php");
@@ -31,6 +32,7 @@ session_start();
 <body>
     <div id="contenitore">
         <div class="form">
+
             <div class="contenuto">
             <h1>Accedi</h1>
             <form method="post">
@@ -42,6 +44,13 @@ session_start();
             </div>
             <div class="input" id="login">
             <input type="submit"name="submit"value="Login">
+            <?php
+            
+            if($error!="")
+            {
+                echo "<h1 id='error'>".$error."<h1>";
+            }
+        ?>
         </div>
             </form>
          </div>
